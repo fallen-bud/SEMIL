@@ -1,8 +1,8 @@
 import API from "../../../services/Api";
 
-/* ======================
+/* 
    Interfaces
-====================== */
+*/
 
 /**
  * Register payload
@@ -27,7 +27,7 @@ export interface LoginPayload {
 
 /**
  * User data returned from backend
- * (NEVER include password / refreshToken)
+ * NEVER include password / refreshToken
  */
 export interface User {
   _id: string;
@@ -40,16 +40,16 @@ export interface User {
 
 /**
  * Auth response
- * (backend → frontend)
+ * backend → frontend
  */
 export interface AuthResponse {
   user: User;
   token: string;
 }
 
-/* ======================
-   Auth API
-====================== */
+
+ //  Auth API
+
 
 const AuthApi = {
   // POST /api/auth/register
