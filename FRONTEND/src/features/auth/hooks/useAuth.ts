@@ -15,6 +15,7 @@ interface UseAuthReturn {
   error: string | null;
   register: (data: RegisterPayload) => Promise<AuthResult>;
   login: (data: LoginPayload) => Promise<AuthResult>;
+  logout: () => void;
 }
 
 
@@ -82,6 +83,10 @@ const useAuth = (): UseAuthReturn => {
       setLoading(false);
     }
   };
+  const logout = () => {
+    localStorage.removeItem("token");
+    setUser(null);
+  }
 
   return {
     user,
@@ -89,6 +94,8 @@ const useAuth = (): UseAuthReturn => {
     error,
     register,
     login,
+    logout,
+    
   };
 };
 

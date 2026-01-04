@@ -18,6 +18,7 @@ interface AuthContextType {
   error: string | null;
   register: ReturnType<typeof useAuth>["register"];
   login: ReturnType<typeof useAuth>["login"];
+  logout: () => void; // 
 }
 
 /* ======================

@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
+import Navbar from "./components/layout/navbar/Navbar";
 // Pages
 import HomePage from "./pages/Home/HomePage";
 // future:
@@ -8,18 +8,23 @@ import HomePage from "./pages/Home/HomePage";
 
 const App = () => {
   return (
-    <Routes>
-      {/* Landing Page */}
-      <Route path="/" element={<HomePage />} />
+    <>
+     {/* Navbar visible on all pages */}
+     <Navbar/>
+    
+      <Routes>
+        {/* Landing Page */}
+        <Route path="/" element={<HomePage />} />
 
-      {/* Auth Pages (future) */}
-      {/* <Route path="/login" element={<LoginPage />} /> */}
-      {/* <Route path="/register" element={<RegisterPage />} /> */}
+        {/* Auth Pages (future) */}
+        {/* <Route path="/login" element={<LoginPage />} /> */}
+        {/* <Route path="/register" element={<RegisterPage />} /> */}
 
-      {/* Protected Pages (future) */}
-      {/* <Route path="/report-missing" element={<UploadMissingPage />} /> */}
-      {/* <Route path="/found-person" element={<SearchMissingPage />} /> */}
-    </Routes>
+        {/* Protected Pages (future) */}
+        {/* <Route path="/report-missing" element={<UploadMissingPage />} /> */}
+        {/* <Route path="/found-person" element={<SearchMissingPage />} /> */}
+      </Routes>
+    </>
   );
 };
 
