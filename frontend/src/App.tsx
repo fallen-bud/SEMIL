@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/navbar/Navbar";
+import RegisterPage from "./pages/auth/register/RegisterPage";
+import LoginPage from "./pages/auth/login/LoginPage";
 // Pages
 import HomePage from "./pages/Home/HomePage";
 // future:
@@ -17,8 +19,8 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
 
         {/* Auth Pages (future) */}
-        {/* <Route path="/login" element={<LoginPage />} /> */}
-        {/* <Route path="/register" element={<RegisterPage />} /> */}
+        <Route path="/login" element={<LoginPage />} /> 
+        <Route path="/register" element={<RegisterPage />} /> 
 
         {/* Protected Pages (future) */}
         {/* <Route path="/report-missing" element={<UploadMissingPage />} /> */}

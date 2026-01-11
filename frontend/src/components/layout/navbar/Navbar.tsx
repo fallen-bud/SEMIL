@@ -13,7 +13,7 @@ const Navbar = () => {
       : "text-gray-700 hover:text-indigo-600";
 
   return (
-    <header className="w-full border-b bg-white">
+    <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         {/* Logo */}
         <NavLink to="/" className="text-xl font-bold text-indigo-600">
@@ -59,7 +59,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden"
+          className="md:hidden "
         >
           ☰
         </button>
