@@ -216,6 +216,7 @@ export const searchMissingPerson = async (req, res) => {
 
     return res.status(200).json({
       success: true,
+      status: matchedPerson ? "matched" : "saved",
       matchFound: !!matchedPerson,
       similarity,
       match: matchedPerson,

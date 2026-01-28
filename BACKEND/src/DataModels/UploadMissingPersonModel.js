@@ -11,6 +11,7 @@ import mongoose,{Schema} from 'mongoose';
           type: { type: String, enum: ["Point"], default: "Point" },
           coordinates: { type: [Number], required: true }
      },
+    gender: { type: String, required: false, enum: ["male", "female", "other"] },
 
     bodyFeatures: {
     height: String,
@@ -22,6 +23,7 @@ import mongoose,{Schema} from 'mongoose';
     beard: String,
     otherMarks: String
 },
+    
 
     costume:
      { type: String },

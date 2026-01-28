@@ -30,8 +30,8 @@ const Navbar = () => {
             Report Missing
           </NavLink>
 
-          <NavLink to="/found-person" className={navLinkClass}>
-            Found Someone
+          <NavLink to="/upload-missing-person" className={navLinkClass}>
+            Missing Person
           </NavLink>
 
           {!user ? (

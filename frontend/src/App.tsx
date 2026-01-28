@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/navbar/Navbar";
 import RegisterPage from "./pages/auth/register/RegisterPage";
 import LoginPage from "./pages/auth/login/LoginPage";
-// Pages
+import SearchMissingReportPage from "./pages/missing/Report/ReportMissingPage";
+import UploadMissingPersonPage from "./pages/missingPerson/UploadMissingPersonPage";
 import HomePage from "./pages/Home/HomePage";
 // future:
 // import LoginPage from "./pages/auth/LoginPage";
@@ -23,8 +24,8 @@ const App = () => {
         <Route path="/register" element={<RegisterPage />} /> 
 
         {/* Protected Pages (future) */}
-        {/* <Route path="/report-missing" element={<UploadMissingPage />} /> */}
-        {/* <Route path="/found-person" element={<SearchMissingPage />} /> */}
+        <Route path="/report-missing" element={<SearchMissingReportPage />} />
+        <Route path="/upload-missing-person" element={<UploadMissingPersonPage />} />
       </Routes>
     </>
   );
